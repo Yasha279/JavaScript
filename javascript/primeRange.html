@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factor</title>
+</head>
+<body>
+    <script>
+        let a=parseInt(prompt("Enter starting number of range:"));
+        let b=parseInt(prompt("Enter starting number of range:"));
+        let i,j;
+            for(i=a+1;i<b;i++){
+                flag=true;
+                for(j=2;j<i;j++){
+                    if(i%j==0){
+                        flag=false;
+                    }
+                }
+                if(flag==true){
+                    document.write("<br/>"+i);
+                }
+            }
+        
+    </script>
+</body>
+</html>
