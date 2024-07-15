@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse_event</title>
+</head>
+<body>
+    <button id="btn">click</button>
+    <br/>
+    <br/>
+    <div>
+        Username:<input type="text" id="uname_event" placeholder="Enter Username" onmouseover="txtChange()">
+    </div>
+    <br/>
+    <button id="btn1" onmousedown="changeToPink()">mouse down</button>
+    <br/><br/>
+    <button id="btn2" onmousemove="changeToBlue()">mouse move</button>
+    <br/><br/>
+    <button id="btn3" onmouseout="changeToBrown()">mouse out</button>
+    <br/><br/>
+    <button id="btn4" onmouseup="changeToOrange()">mouse up</button>
+    <script>
+        function colorRed(){
+            document.body.style.backgroundColor = "red";
+        }
+        function colorGreen(){
+            document.body.style.backgroundColor = "green";
+        }
+        function txtChange(){
+            document.getElementById('uname_event').style.border="3px solid red"
+        }
+        function changeToPink(){
+            document.body.style.backgroundColor = "pink";
+        }
+        function changeToBlue(){
+            document.body.style.backgroundColor = "blue";
+        }
+        function changeToBrown(){
+            document.body.style.backgroundColor = "brown";
+        }
+        function changeToOrange(){
+            document.body.style.backgroundColor = "orange";
+        }
+        document.getElementById('btn').addEventListener('click',()=>{
+            console.log("click")
+            //document.getElementById('btn1').innerHTML="Single click event"
+            document.body.style.background = colorRed()
+        })
+        document.getElementById('btn').addEventListener('dblclick',()=>{
+            console.log("dblclick")
+            document.body.style.background = colorGreen()
+        })
+        
+        document.getElementById('uname_event').addEventListener('mouseover',()=>{  console.log("over")
+        document.body.style.border=txtChange()
+        })
+        document.getElementById('btn1').addEventListener('mousedown',()=>{
+            document.body.style.background=changeToPink()
+            console.log("mouse down")
+        })  
+        document.getElementById('btn2').addEventListener('mousemove',()=>{
+            document.body.style.background=changeToBlue()
+            console.log("mouse move")
+        })  
+        document.getElementById('btn3').addEventListener('mouseout',()=>{
+            document.body.style.background=changeToBrown()
+            console.log("mouse out")
+        })
+        document.getElementById('btn4').addEventListener('mouseup',()=>{
+            document.body.style.background=changeToOrange()
+            console.log("mouse up")
+        })
+    </script>
+</body>
+</html>

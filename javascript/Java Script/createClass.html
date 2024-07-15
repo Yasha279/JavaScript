@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createClass</title>
+</head>
+<body>
+    <script>
+        class student {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            sayHello() {
+                console.log("hello i'm ",this.name," and my age is ",this.age);
+            }
+        }
+        stu1 = new student('abc', 30);
+        stu1.sayHello();
+    </script>
+</body>
+</html>

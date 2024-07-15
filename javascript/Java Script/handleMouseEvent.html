@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>handleMouseEvent</title>
+</head>
+<body>
+    <button id="left" onclick="leftClick(event)">Left Click</button>
+    <button id="right">Right Click</button>
+    <script>
+        function leftClick(e){
+            console.log(e.prevent);
+        }
+    </script>
+</body>
+</html>

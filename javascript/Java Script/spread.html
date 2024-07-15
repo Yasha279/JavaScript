@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread</title>
+</head>
+<body>
+    <script>
+        studentDetail={
+            name: 'abc',
+            enroll: 12323,
+            batch: 3,
+        };
+        parentDetail={
+            name: 'xyz',
+            phnNO: 1233454567,
+            email: "qwer@gmail.com",
+        };
+        personalDetail={
+            no: 9876543210,
+            email: "asdf@gmail.com",
+            age: 25
+        };
+
+        let student={...studentDetail,...parentDetail,...personalDetail}
+        console.log("before stu:",student)
+        student1={...student,name:"qwe"}
+        console.log("stu1:",student1)
+        console.log("after stu:",student)
+    </script>
+</body>
+</html>

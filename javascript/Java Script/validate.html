@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validate</title>
+</head>
+<body>
+    <h2><b>JavaScript Validation Form</b></h2>
+    Username: <input type="text" id="uname" placeholder="enter username"/><br/><br/>
+    Password: <input type="password" id="pword" placeholder="enter password" onclick="validateUname()"/><br/><br/>
+    RE-Password: <input type="password" id="repeat_pword" placeholder="enter repeat password for confirm" onclick="validatePword()"/><br/><br/>
+    Age: <input type="number" id="age" placeholder="enter your age" onclick="validateRepwd()"/><br/><br/>
+    Enrollment number: <input type="number" id="enroll" placeholder="enter your enrollment number" onclick="validateAge()"/><br/><br/>
+    Email: <input type="email" id="email" placeholder="enter your email" onclick="validateEnroll()"/><br/><br/>
+    <button onclick="validateForm()">Submit</button>
+    <script>
+        function validateUname(){
+            var uname = document.getElementById("uname").value;
+            if(uname.length<8){
+                alert("Username must be at least 8 characters long");
+             }
+        }
+        function validatePword(){
+            var pword = document.getElementById("pword").value;
+            var pattern=/[@#$%&]{1,}[0-9]{1,}/
+             var regex=new RegExp(pattern);
+             if(!regex.test(pword)){
+                alert("Password must contain at least one special character and one number");
+             }
+        }
+        function validateRepwd(){
+            var repeat_pword = document.getElementById("repeat_pword").value;
+            if(pword!=repeat_pword){
+                alert("Password and Repeat Password must match");
+             }
+        }
+        function validateAge(){
+            var age = document.getElementById("age").value;
+            if(age<18){
+                alert("Age must be at least 18 years old");
+             }
+        }
+        function validateEnroll(){
+            var enroll = document.getElementById("enroll").value;
+            if(!(enroll.length<11)){
+               alert("Enrollment Number must be 11 characters long");
+            }
+        }
+        function validateForm() {
+           var email = document.getElementById("email").value;
+            var pattern1=/[@]{1}/;
+             var regex1=new RegExp(pattern1);
+             if(!regex1.test(email)){
+                alert("Email must contain @ symbol");
+             }
+        }
+    </script>
+</body>
+</html>

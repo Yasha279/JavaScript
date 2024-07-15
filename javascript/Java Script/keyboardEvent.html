@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboardEvent</title>
+</head>
+<body>
+    <button id="btn" onkeydown="colorRed()">keydown</button>
+    <br/><br/>
+    <button id="btn1" onkeypress="colorGreen()">keypress</button>
+    <script>
+        function colorRed(){
+            document.body.style.backgroundColor = "red";
+        }
+        function colorGreen(){
+            document.body.style.backgroundColor = "green";
+        }
+        document.getElementById('btn').addEventListener('keydown',()=>{
+            console.log("keydown")
+            document.body.style.background = colorRed()
+        })
+        document.getElementById('btn1').addEventListener('keypress',()=>{
+            console.log("keypress")
+            document.body.style.background = colorGreen()
+        })
+    </script>
+</body>
+</html>

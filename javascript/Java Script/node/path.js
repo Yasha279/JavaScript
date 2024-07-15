@@ -1,0 +1,8 @@
+const path=require('path')
+console.log(path.join('foo','bar','abc'))
+console.log(path.relative('bar','abc'))
+console.log(path.normalize('foo/bar/..'))
+console.log(path.resolve('foo','bar','abc'))
+console.log(path.dirname('/foo/abc.txt'))
+console.log(path.extname('/foo/abc.txt'))
+console.log(path.basename('/foo/abc.txt'))

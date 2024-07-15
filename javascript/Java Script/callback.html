@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        function printResult(sum){
+            console.log(sum);
+        }
+        function myCal(n1,n2,myCallback){
+            let sum=n1+n2;
+            myCallback(sum);
+        }
+
+        myCal(3,4,printResult)
+    </script>
+</body>
+</html>
